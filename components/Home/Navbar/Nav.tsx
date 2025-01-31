@@ -1,15 +1,30 @@
+"use client";
 import { Navlinks } from '@/constant/constant'
 import { MenuIcon, Search, ShoppingCart } from 'lucide-react';
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 type Props={
   openNav:()=>void;
 };
 
 const Nav = ({openNav}:Props) => {
+
+  const [navBg,setNavBg]=useState(false);
+
+  useEffect(()=>{
+    const handler = ()=>{
+      if( window.scrollY >=90) setNavBg(true);
+      if(window.scrollY <90) setNavBg(false);
+    };
+    window.addEventListener('scroll',handler);
+    return()=> window.removeEventListener('scroll',handler);
+  },[])
+
+  const bg_style= navBg?'bg-gray-900 shadow-md':"";
+
   return (
-    <div className='flex items-center justify-between h-[20vh] fixed z-[100] w-full mx-auto transition-all duration-200'>
+    <div className={`flex ${bg_style} items-center justify-between h-[20vh] fixed z-[100] w-full mx-auto transition-all duration-200`}>
         {/* logo */}
         <h1 className='text-3xl text-white font-bold ml-8 md:ml-16'>IMGIAI</h1>
         <div className='md:flex items-center space-x-10 hidden'>
