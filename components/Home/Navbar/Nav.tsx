@@ -3,7 +3,11 @@ import { MenuIcon, Search, ShoppingCart } from 'lucide-react';
 import Link from 'next/link'
 import React from 'react'
 
-const Nav = () => {
+type Props={
+  openNav:()=>void;
+};
+
+const Nav = ({openNav}:Props) => {
   return (
     <div className='flex items-center justify-between h-[20vh] fixed z-[100] w-full mx-auto transition-all duration-200'>
         {/* logo */}
@@ -22,7 +26,7 @@ const Nav = () => {
         <div className='flex items-center space-x-5 md:space-x-8 text-white mr-8 md:mr-16 '>
           <ShoppingCart className='cursor-pointer w-6 h-6'/> 
           <Search className='cursor-pointer w-6 h-6'/> 
-          <MenuIcon  className='cursor-pointer w-6 h-6 md:hidden'/> 
+          <MenuIcon onClick={openNav}  className='cursor-pointer w-6 h-6 md:hidden'/> 
         </div>
        
         </div>
