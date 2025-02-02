@@ -15,7 +15,7 @@ const About = () => {
     <h1 className='text-gray-300 mb-4 font-semibold text-lg capitaliz'>What we do </h1>
     <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4'>Create your own businees</h1>
     <p className='mb-8 text-gray-200 text-base '> lorem epsam dolor site amet </p>
-    <Button className='bg-rose-500 w-36 h-12 text-base uppercase ' size={'lg'}>About Us</Button>
+    <Button className='bg-rose-500 w-36 h-12 text-base uppercase ' size={'lg'}>About US</Button>
 </div>
         </div>
     </div>

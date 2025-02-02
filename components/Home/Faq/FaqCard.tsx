@@ -27,7 +27,7 @@ const FaqCard = () => {
       <AccordionItem value="item-3">
         <AccordionTrigger className='md:text-xl lg:text-2xl'>Is it animated?</AccordionTrigger>
         <AccordionContent className='text-base md:text-lg'>
-          Yes. It's animated by default, but you can disable it if you prefer.
+          Yes. Its animated by default, but you can disable it if you prefer.
         </AccordionContent>
       </AccordionItem>
     </Accordion>
