@@ -16,9 +16,13 @@ useEffect(()=>{
 const initAOS = async()=>{
   await import ('aos');
   AOS.init({
-    
-  })
+    duration:1000,
+    easing:'ease',
+    once:true,
+    anchorPlacement:'top-bottom'
+  });
 }
+initAOS();
 },[])
 
   return (
@@ -30,6 +34,7 @@ const initAOS = async()=>{
     <Review/>
     <Faq/>
     </div>
+    
   )
 }
 

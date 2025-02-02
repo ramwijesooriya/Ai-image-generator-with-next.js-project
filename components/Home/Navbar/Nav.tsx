@@ -24,7 +24,7 @@ const Nav = ({openNav}:Props) => {
   const bg_style= navBg?'bg-gray-900 shadow-md':"";
 
   return (
-    <div className={`flex ${bg_style} items-center justify-between h-[20vh] fixed z-[100] w-full mx-auto transition-all duration-200`}>
+    <div className={`flex ${bg_style} items-center justify-between h-[10vh] fixed z-[100] w-full mx-auto transition-all duration-200`}>
         {/* logo */}
         <h1 className='text-3xl text-white font-bold ml-8 md:ml-16'>IMGIAI</h1>
         <div className='md:flex items-center space-x-10 hidden'>
