@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button'
 import axios from 'axios';
 import { Loader } from 'lucide-react';
+import Image from 'next/image';
 import React, { useState } from 'react'
 import { toast } from 'sonner';
 
@@ -85,7 +86,7 @@ const Hero = () => {
     )}
     {
         image && <div className='mt-8 flex flex-col items-center k'>
-            <img src={image} alt='ai image' className='max-w-full h-[500px] rounded-lg shadow-lg ' loading='lazy'/>
+            <Image src={image} alt='ai image' className='max-w-full h-[500px] rounded-lg shadow-lg ' loading='lazy'/>
             <Button onClick={handleDownloadImage} className='mt-4 mb-4 bg-orange-500 hover:orange--800'>
                 Download
             </Button>
